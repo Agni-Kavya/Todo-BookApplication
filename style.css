@@ -1,0 +1,172 @@
+
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-theme {
+    --primary-color: #212121;
+    --secondary-color: #edf2fc;
+}
+
+.navbar {
+    background-color: rgb(230, 178, 90);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin-right: auto;
+}
+
+.navbar img {
+    margin-left: 10px;
+    width: 30px;
+    height: auto;
+}
+
+.book-container {
+    padding: 15px;
+    width: 25%;
+    background-color: rgb(189, 46, 70);
+    border-radius: 10px;
+    color: white;
+    border: solid black 2px;
+    margin: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.book-container h2 {
+    color: rgb(230, 178, 90);
+}
+
+.book-container button {
+    background-color: rgb(230, 178, 90);
+    color: black;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+.add-button {
+    background-color: rgb(230, 178, 90);
+    color: black;
+    border-radius: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 40px;
+    border: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.popup-overlay {
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.popup-box {
+    background-color: rgb(230, 178, 90);
+    width: 40%;
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 2;
+    display: none;
+}
+
+.popup-box input,
+.popup-box textarea {
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border-bottom: solid black 2px;
+}
+
+.popup-box input::placeholder,
+.popup-box textarea::placeholder {
+    color: black;
+}
+
+.popup-box button {
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: wheat;
+    border: none;
+}
+
+.popup-box input:focus,
+.popup-box textarea:focus {
+    outline: none;
+}
+
+
+#dark-mode-toggle {
+    background: none; 
+    border: none; 
+    cursor: pointer;
+    padding: 0; 
+}
+
+#dark-mode-toggle img {
+    width: 30px;
+    height: auto;
+}
+
+
+body.dark-theme {
+    --primary-color: #212121;
+    --secondary-color: #edf2fc;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#dark-mode-toggle img {
+    filter: invert(1); 
+}
+
+@media (min-width: 768px) {
+
+    .book-container {
+        width: 30%; 
+        margin: 30px; 
+    }
+
+    .popup-box {
+        width: 40%; 
+        left: 30%; 
+    }
+}
